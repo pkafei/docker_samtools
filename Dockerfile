@@ -11,6 +11,8 @@ run wget 'http://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtool
 
 run tar xfv samtools-0.1.19.tar.bz2
 
-run cd /samtools-0.1.19; make; make clean
+run touch .bashrc; echo export "SAMTOOLS_HOME=/samtools-0.1.19" >> .bashrc
+
+run cd /samtools-0.1.19; make;
 
 entrypoint "bin/bash"
