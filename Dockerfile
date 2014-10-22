@@ -13,6 +13,8 @@ run tar xfv samtools-0.1.19.tar.bz2
 
 run touch .bashrc; echo export "SAMTOOLS_HOME=/samtools-0.1.19" >> .bashrc
 
-run cd /samtools-0.1.19; make;
+run echo export PATH=$SAMTOOLS_HOME:$PATH >> .bashrc
+
+run cd /samtools-0.1.19; make;ln -s /samtools-0.1.19/samtools /usr/local/bin/samtools
 
 entrypoint "bin/bash"
