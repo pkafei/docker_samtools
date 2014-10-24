@@ -17,4 +17,4 @@ run echo export PATH=$SAMTOOLS_HOME:$PATH >> .bashrc
 
 run cd /samtools-0.1.19; make;ln -s /samtools-0.1.19/samtools /usr/local/bin/samtools
 
-entrypoint "bin/bash"
+entrypoint ["/usr/local/bin/samtools"]
